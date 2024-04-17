@@ -21,7 +21,9 @@ const Home = () => {
 
     return (
         <div>
-            <h2>Home</h2>
+            {
+                topMovies && topMovies.map((movie, key) => <p key={key}>{movie.title}</p>)
+            }
         </div>
     )
 }
