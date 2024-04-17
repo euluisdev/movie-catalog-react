@@ -7,8 +7,10 @@ const NavBar = () => {
             <h2>
                 <Link to='/'>MoviesCatalog</Link>
             </h2>
-            <Link to='/movie/1'>Movie</Link>
-            <Link to='/search'>Search</Link>
+            <form>
+                <input type="text" placeholder="Busque seu filme" />
+                <button type="submit"></button>
+            </form>
         </nav>
     )
 }
