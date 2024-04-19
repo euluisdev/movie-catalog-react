@@ -13,6 +13,19 @@ const Search = () => {
     const [movies, setMovies] = useState([]);
     const query = searchParams.get('q');
 
+    const getSearchedMovies = async (url) => {
+        const res = await fetch(url);
+        const data = await res.json();
+
+        setMovies(data.results);
+    }
+
+    useEffect(() => {
+        const searchWidthQueryUrl = `${searchURL}?${apiKey}&query=${query}`;
+
+        getSearchedMovies(searchWidthQueryUrl);
+    }, [query]);
+
     return (
         <div className="container">
             <h2 className="title">
