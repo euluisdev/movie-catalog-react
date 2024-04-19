@@ -10,8 +10,11 @@ const NavBar = () => {
     const navigate = useNavigate();
 
     const handleSubmit = (e) => {
-        e.preventDefault();  //não deixa a pag atulizar ao submeter o form     
-        console.log(search);
+        e.preventDefault();  //não permite a pag atulizar ao submeter o form     
+        if (!search) return;  // caso input vazio, não vai pesquisar! retorna;    
+
+        navigate(`/search?q=${search}`);
+        setSearch('');
     }
 
     return (
