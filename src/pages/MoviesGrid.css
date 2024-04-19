@@ -1,4 +1,4 @@
-.container {
+.container .title {
     color: #FFF;
     font-size: 2.5rem;
     text-align: center;
@@ -14,7 +14,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 2rem;
-    max-width: 1400px;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
@@ -28,3 +28,18 @@
     background-color: #111;
     padding: 1rem;
 }
+
+.moviesContainer div img {
+    max-width: 100%;
+}
+
+.moviesContainer div img, 
+.moviesContainer div p, 
+.moviesContainer div h2 {
+    margin-bottom: 1rem;
+}
+
+.moviesContainer div svg {
+    color: #E50914;
+}
+
