@@ -23,6 +23,11 @@ const Movie = () => {
         setMovie(data);
     }
 
+    useEffect(() => {
+        const movieUrl = `${moviesURL}${id}?${apiKey}`;
+        getMovie(movieUrl);
+    }, [])
+
     return (
         <div>
             <h2>Movie</h2>
