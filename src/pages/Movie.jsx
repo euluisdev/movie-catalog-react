@@ -30,7 +30,9 @@ const Movie = () => {
 
     return (
         <div>
-            <h2>Movie</h2>
+            {
+                movie && <>{movie.title}</>
+            }
         </div>
     )
 }
