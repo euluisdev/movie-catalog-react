@@ -23,13 +23,20 @@ const Movie = () => {
         setMovie(data);
     }
 
+    const formatCurrency = (number) => {
+        return number.toLocaleString('en-US', {
+            style: 'currency', 
+            currency: 'USD', 
+        });
+    };
+
     useEffect(() => {
         const movieUrl = `${moviesURL}${id}?${apiKey}`;
         getMovie(movieUrl);
     }, [])
 
     return (
-        <div movie-page>
+        <div className="movie-page">
             {
                 movie && 
                     <>
@@ -39,13 +46,13 @@ const Movie = () => {
                             <h3>
                                 <BsWallet2 /> Orçamento:
                             </h3>
-                            <p>{movie.budget}</p>
+                            <p>{formatCurrency(movie.budget)}</p>
                         </div>
                         <div className="info">
                             <h3>
                                 <BsGraphUp /> Receita:
                             </h3>
-                            <p>{movie.revenue}</p>
+                            <p>{formatCurrency(movie.revenue)}</p>
                         </div>
                         <div className="info">
                             <h3>
