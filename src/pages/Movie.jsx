@@ -62,7 +62,7 @@ const Movie = () => {
                             </h3>
                             <p>{movie.runtime} minutos</p>
                         </div>
-                        <div className="info">
+                        <div className="info description">
                             <h3>
                                 <BsFillFileEarmarkTextFill /> Descrição:
                             </h3>
